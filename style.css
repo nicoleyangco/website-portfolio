@@ -1,0 +1,111 @@
+:root {
+  --bg: #090c24;
+  --bg-alt: #0d1130;
+  --nav: #040a38;
+  --card: #111640;
+  --cyan: #2bb8d6;
+  --text: #ffffff;
+  --muted: #aab0cc;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+section { scroll-margin-top: 4.5rem; }
+h1, h2, h3 { font-weight: 700; }
+h2 { margin-bottom: 1.25rem; }
+p { color: var(--muted); }
+.accent { color: var(--cyan); }
+.narrow { max-width: 40rem; }
+
+/* Navbar */
+.navbar { background: var(--nav); }
+.navbar-brand { font-weight: 700; font-size: 1.25rem; color: var(--text); }
+.nav-link { font-size: .9rem; font-weight: 500; }
+
+/* Outlined pill buttons */
+.btn-pill {
+  border: 1.5px solid var(--cyan);
+  border-radius: 50px;
+  color: var(--text);
+  padding: .5rem 1.4rem;
+  font-weight: 500;
+  background: transparent;
+}
+.btn-pill:hover, .btn-pill:focus-visible { background: var(--cyan); color: var(--bg); border-color: var(--cyan); }
+.btn-pill.btn-sm { padding: .3rem 1rem; }
+.btn-pill.btn-lg { padding: .7rem 2rem; font-size: 1.05rem; }
+
+/* Hero */
+.hero { min-height: 100vh; padding: 6rem 0 3rem; }
+.hero h1 { font-size: clamp(2rem, 5vw, 3.1rem); line-height: 1.2; }
+.hero-sub { font-size: 1.05rem; margin-top: 1rem; }
+.profile-photo {
+  display: block;
+  width: 100%;
+  max-width: 380px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--cyan);
+  padding: 10px;
+  margin: 0 auto;
+}
+.socials { display: flex; gap: 1.25rem; }
+.socials a { color: var(--text); }
+.socials a:hover { color: var(--cyan); }
+
+/* Sections */
+.py-6 { padding-top: 5rem; padding-bottom: 5rem; }
+.alt { background: var(--bg-alt); }
+
+.skill {
+  border: 1.5px solid var(--cyan);
+  border-radius: 50px;
+  padding: .4rem 1.1rem;
+  font-weight: 500;
+}
+
+/* Cards */
+.card {
+  background: var(--card);
+  border: 1px solid rgba(43, 184, 214, .45);
+  border-radius: 16px;
+  overflow: hidden;
+  color: var(--text);
+}
+.card-img-top { background: #fff; }
+.carousel-img { height: 260px; object-fit: contain; background: #fff; }
+.carousel-control-prev-icon, .carousel-control-next-icon { background-color: var(--nav); border-radius: 50%; background-size: 60%; padding: 1.1rem; }
+
+.code-block {
+  background: var(--bg);
+  color: #fff;
+  padding: 1rem;
+  font-size: .8rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 0;
+}
+
+.cert-img { width: 100%; border-radius: 12px; border: 1px solid rgba(43, 184, 214, .45); }
+
+footer { background: var(--nav); color: var(--muted); }
+
+a:focus-visible, button:focus-visible { outline: 3px solid var(--cyan); outline-offset: 2px; }
+
+@media (max-width: 991px) {
+  .hero { min-height: auto; }
+  .py-6 { padding-top: 3.5rem; padding-bottom: 3.5rem; }
+  .navbar .btn-pill { margin: .5rem 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
